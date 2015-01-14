@@ -36,34 +36,55 @@
       </div>
 
       <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
+        <h1>Machine Learning</h1>
+        <p class="lead">Homework written by Larry.</p>
         <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
       </div>
 
       <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-          <h4>Sass</h4>
-          <p>Sass is a mature, stable, and powerful professional grade CSS extension language.</p>
-
-
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
+        <div class="">
+          <h4>Black Jack</h4>
+          <img align="left" style="margin:10px;" src="http://equivocos.com/wp-content/uploads/2013/11/21-blackjack-winner.jpg">
+          <p>
+            Write a python command line program for playing blackjack. In this game, the dealer has only one deck of cards. The cards are drawn without replacement.
+          </p>
+          <p>
+            Display the House's hand of one randomly selected card (a text string will be fine). Display the user's hand of two randomly selected cards. Ask the user if she wants to hit or stand. If she selects hit, draw a card from the deck. If the total is over 21, she busts and loses. If it's under 21, repeat the hit/stand question. If it's 21 exactly, the player wins. When the player chooses stand, the House reveals its second card. If the house's total is greater than the user, the house wins the round. If the total is less than 17, the house hits. Display the next card and total. If the total is 17 or greater, the house stands. If the total is greater than 21, the house busts and the player wins. Repeat this until either the house busts or the house's total is greater than 17. If the house stands and its total is less than the total of the player, the player wins, otherwise the house wins (if it doesn't bust). Display whether the player or house won. After the each round, if the deck has more than 10 cards, ask the player if she wants to continue, otherwise end the game.
+          </p>
+          <p>
+            Make sure you don't write all of this at the top level! Use functions (A function for shuffling, for instance). There is no need for python classes in this assignment, but you can use one if you want. Don't cut and paste code from the net or another student (I will be checking for this)! Submit your python source code file (with a .py extension; Don't upload .pyc files!) here.
+          </p>
         </div>
       </div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      <h1 class='text-center'>BLACK JACK</h1>
+      <div class='row'>
+        <h3 class='col-xs-6'>DEALER: <span id='dh'></span></h3>
+        <h3 class='col-xs-4'>DECK: <span id='deck'></span></h3>
+      </div>
+      <div class='row'>
+        <h3 class='col-xs-5'><span id='i0'>H0</span>: <span id='h0'></span></h3>
+        <h3 class='col-xs-5'><span id='i1'>H1</span>: <span id='h1'></span></h3>
+        <h3 class='col-xs-5'><span id='i2'>H2</span>: <span id='h2'></span></h3>
+        <h3 class='col-xs-5'><span id='i3'>H3</span>: <span id='h3'></span></h3>
+      </div>
+      <div class='row'>
+        <h3 class='col-xs-4'>ROUND: <span id='round'></span></h3>
+        <h3 class='col-xs-4'>BET: $<span id='bet'></span></h3>
+        <h3 class='col-xs-4'>TOTAL: $<span id='total'></span></h3>
+      </div>
+        <button class='btn btn-success' id='start'>START</button>
+        <button class='btn btn-primary' id='bet2'>BET $2</button>
+        <button class='btn btn-primary' id='stand'>STAND</button>
+        <button class='btn btn-primary' id='hit'>HIT</button>
+        <button class='btn btn-primary' id='doubledown'>DOUBLE</button>
+        <button class='btn btn-primary' id='split'>SPLIT</button>
+        <button class='btn btn-danger' id='cleanup'>CLEAR</button>
+      <p>
+      <div class="well">
+        <div id="log"></div>
       </div>
 
-    </div>
+   </div>
 
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -95,6 +116,11 @@
     </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/blackjack.js"></script>
+        <script src="scripts/ui.js"></script>
+        <script src="scripts/deck.js"></script>
+        <script src="scripts/dealer.js"></script>
+        <script src="scripts/player.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
